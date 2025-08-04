@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise launches multi-currency travel card in India</title>
+  <style>
+    :root {
+      --primary-color: #00B140;
+      --text-color: #0e0f0d;
+      --light-text-color: #666666;
+      --sidebar-bg: #f6f9f6;
+      --border-color: #e5e5e5;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text-color);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    .logo-area img {
+      height: 30px;
+      margin-right: 12px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      margin-left: 40px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+    .register-btn {
+      margin-left: auto;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .register-btn:hover {
+      background-color: #009e3e;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .content {
+      flex: 3;
+      max-width: 740px;
+    }
+    .sidebar {
+      flex: 1;
+      margin-left: 40px;
+      position: sticky;
+      top: 80px;
+      align-self: flex-start;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-top: 0;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    p:first-of-type {
+      margin-top: 0;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li::marker {
+      color: var(--primary-color);
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #008b34;
+    }
+    .sidebar-section {
+      margin-bottom: 40px;
+    }
+    .sidebar-section h5 {
+      margin-bottom: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--light-text-color);
+    }
+    .sidebar-section ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .sidebar-section li {
+      margin-bottom: 12px;
+    }
+    .sidebar-section a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .sidebar-section a svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--primary-color);
+      fill: var(--primary-color);
+    }
+    .sidebar-section .share-icons {
+      display: flex;
+      gap: 12px;
+    }
+    .share-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      /* Use a very light neutral tint for the icon background similar to the Wise newsroom */
+      background-color: #f3f7f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .share-icons a:hover {
+      background-color: #e9f4ed;
+    }
+    .share-icons a svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--primary-color);
+    }
+    .footnotes {
+      margin-top: 40px;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--light-text-color);
+    }
+    .footnotes li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="data:image/png;base64,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" alt="Wise logo">
+      <span>Newsroom</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">News</a>
+      <a href="#">Public Policy</a>
+      <a href="#">About</a>
+      <a href="#">Media kits</a>
+      <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="register-btn">Register</a>
+  </header>
+  <div class="container">
+    <div class="content">
+      <h1>
+Wise launches multi-currency travel card in India as students and
+travellers embrace borderless spending</h1>
+<p><b>Mumbai, December 18, 2025</b> – <b>Wise</b>
+(LON: WISE), the global fintech building the best way to move and
+manage money, today announced the launch of the <b>Wise Card</b> in
+India – a multi-currency <b>foreign exchange (FX) travel card</b>
+that lets Indian customers spend abroad with zero hidden fees and
+instant currency conversion. This launch follows a series of
+regulatory approvals from the Reserve Bank of India (RBI) that paved
+the way for Wise to offer international card services in the
+country<a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=Mumbai%2C%20June%2003%2C%202025%20%E2%80%93,%E2%80%93%20Cross%20Border%20for%20exports">[1]</a><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=,3%20business%20days">[2]</a>.
+Within weeks of release, the Wise Card has been <b>widely embraced by
+students and travellers</b>, indicating a major shift in how Indians
+manage money overseas. Over <b>100,000 customers</b> joined the
+card’s waitlist ahead of launch, and more than <b>70% have already
+completed KYC and received their cards</b>, a conversion rate
+significantly higher than industry norms for financial products
+(where up to 30% of applicants typically drop off during onboarding).</p>
+<h3>Key Highlights</h3>
+<ul>
+	<li><p><b>High Demand and Quick Adoption:</b> Over
+	<b>100k</b> Indians signed up on the Wise Card waitlist; <b>70%</b>
+	have completed verification and activation in the first month,
+	reflecting seamless digital onboarding. (By comparison, traditional
+	forex card issuers often see only ~70% of applicants complete KYC
+	due to cumbersome paperwork requirements<a href="https://www.hdfcbank.com/personal/pay/cards/forex-cards/multicurrency-platinum-forexplus-chip-card/eligibility#:~:text=%2A%20Self,for%20funding%20the%20Forex%20card">[3]</a>.)</p></li>
+	<li><p><b>Students Going Cashless:</b>
+	Education-related payments made up <b>75% of Wise’s volume in
+	India</b> as of 2024<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=I%20switched%20to%20instant%20platforms%2C,%E2%80%9D">[4]</a>.
+	Now thousands of Indian students moving abroad have shifted from
+	one-off bank transfers to the Wise Card for daily expenses – using
+	it for everything from tuition and rent to coffee, often via Apple
+	Pay for the <b>first time</b> in their lives.</p></li>
+	<li><p><b>Empowering Travellers:</b> International
+	travel has surged to <b>53.6% of India’s outward remittances</b>
+	(₹1.41 lakh crore, ~$17&nbsp;billion) in FY2023-24<a href="https://timesofindia.indiatimes.com/business/india-business/indians-spend-record-31-7-billion-abroad-in-fy24-17-rise-in-year/articleshow/110314631.cms#:~:text=after%20the%20imposition%20of%20TCS,billion%20in%20the%20previous%20year">[5]</a><a href="https://timesofindia.indiatimes.com/business/india-business/indians-spend-record-31-7-billion-abroad-in-fy24-17-rise-in-year/articleshow/110314631.cms#:~:text=The%20share%20of%20international%20travel,due%20to%20restrictions%20on%20mobility">[6]</a>.
+	Wise is targeting this boom: holiday-goers can <b>spend in 160+
+	countries at mid-market exchange rates</b> with the Wise Card,
+	avoiding the ~3% markup and fees that most credit cards or money
+	changers impose<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=Over%2095,3.5%25%20markup%20on%20currency%20exchange">[7]</a><a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=rates%20and%20hidden%20fees,fees%20as%20high%20as%203">[8]</a>.</p></li>
+	<li><p><b>Unique Features &amp; Savings:</b> The
+	Wise Card supports <b>contactless and mobile payments</b> –
+	customers can add it to Apple Pay or Google Pay and tap to pay
+	globally – and offers <b>free ATM withdrawals</b> for cash needs
+	abroad<a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=hassle">[9]</a>.
+	Users can hold <b>40+ currencies</b> in their Wise account and
+	convert rupees in-app at real-time rates whenever needed,
+	eliminating hidden fees entirely. (A recent Wise-Redseer report
+	revealed Indian students lost <b>₹1,700 crore</b> in hidden bank
+	charges in 2024 alone<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=In%202024%2C%20Indian%20families%20collectively,to%20hidden%20charges%20from%20banks">[10]</a>
+	– a cost Wise seeks to eliminate for Indian consumers.)</p></li>
+</ul>
+<h2>
+Riding on Wise’s Momentum and Licences in India</h2>
+<p>This product launch builds on <b>Wise’s
+accelerating momentum in India</b> over the past two years. Wise
+first entered the Indian market in 2021 and has since grown rapidly
+by offering faster, cheaper international transfers. Today, Wise
+powers around <b>10% of all remittances sent into India</b><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=This%20milestone%20builds%20on%20Wise%27s,on%20its%20local%20presence%20through">[11]</a>
+and operates on its own Authorised Dealer Category II (AD-II) licence
+to facilitate outward remittances at low cost. For example, sending
+₹1&nbsp;lakh abroad via Wise costs roughly <b>1.5%</b> in fees on
+average, with <b>70% of transfers delivered in under 12 hours</b> –
+far quicker than the 2–3 day industry standard<a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=,3%20business%20days">[12]</a>.</p>
+<p>Earlier this year, Wise also became one of the first fintechs to
+secure the RBI’s <b>in-principle approval as a Payment Aggregator
+(Cross-Border)</b><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=Mumbai%2C%20June%2003%2C%202025%20%E2%80%93,%E2%80%93%20Cross%20Border%20for%20exports">[1]</a>
+for export payments, opening the door to new services. The <b>Wise
+Card</b> leverages these regulatory milestones to bring Indian
+customers a seamless way to <i>spend</i> money internationally,
+complementing Wise’s existing send-and-receive offerings. <b>Smrithi
+Ravi, Wise’s APAC Head of Engineering</b>, notes that the company’s
+expanded India hub in Hyderabad has been key to localizing such
+products: <i>“Our engineering teams in India have been building
+features specifically tailored to Indian customers’ needs.
+Launching the Wise Card here was a natural next step – we had the
+tech and licenses in place, and a clear demand from users.”</i></p>
+<p>Notably, Wise has <b>streamlined the traditionally cumbersome KYC
+process</b> for issuing an FX card. Unlike legacy banks that require
+stacks of physical documents – from passport and PAN copies to visa
+and bank statements – and manual verification<a href="https://www.hdfcbank.com/personal/pay/cards/forex-cards/multicurrency-platinum-forexplus-chip-card/eligibility#:~:text=%2A%20Self,for%20funding%20the%20Forex%20card">[3]</a>,
+Wise’s onboarding is 100% digital. Most users complete verification
+from their smartphone in minutes via video KYC and secure document
+uploads. <i>“I was amazed that I didn’t have to visit a branch or
+mail any papers. I signed up for the Wise Card from my couch and got
+verified the same day,”</i> says <b>Rohan Mehta</b>, a 19-year-old
+from Mumbai headed to study in the UK.</p>
+<h2>
+Students Embrace a Cashless, Card-first Lifestyle</h2>
+<p>Indian students abroad have been early
+adopters of the Wise Card. Having already used Wise to pay tuition
+and rent internationally, many are now using the card for day-to-day
+spending rather than dealing with large wire transfers or carrying
+cash. In fact, <b>three out of four Wise customers who sent money for
+education have also opted for the card</b> (an attach rate of ~75%).
+They benefit from <b>mid-market FX rates with no markup</b> and
+instant access to money, which is a stark change from the past.</p>
+<p>“<i>Back when I first went abroad, my parents would do a bank
+transfer for my big expenses, and I’d carry some cash for small
+purchases. I never imagined I’d be</i> <i>tapping my phone to pay</i>
+<i>for a meal in London,”</i> admits <b>Rohan Mehta</b>, now a
+student at King’s College. <i>“With Wise, I just use Apple Pay
+everywhere – from the Tube to groceries – and it pulls from my
+rupee balance at the real rate. It’s seamless, and my family saves
+on fees. This is something</i> <i>I’d never experienced before,
+coming from India.”</i></p>
+<p>His sentiment is echoed by others who have switched. Instead of
+juggling forex demand drafts, multiple bank accounts, or expensive
+campus cards, students are managing all their finances through the
+Wise app and card. <b>Wise’s internal data</b> shows that on
+average, new student users make <b>8+ transactions per week</b> with
+the card, pointing to regular use for groceries, restaurants, and
+subscriptions like Spotify and Netflix. This marks a shift from a
+one-off remittance mindset to a <b>continuous, cashless spending
+habit</b> – a change powered by convenience and transparency.
+<i>“Students today move fast; their money should too. Five-day
+waits and surprise charges don’t fit their lifestyle,”</i> says
+<b>Taneia Bhardwaj, South Asia Expansion Lead at Wise</b>,
+highlighting that young Indians expect digital solutions abroad just
+as they do at home<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=THE%20ISSUE%20OF%20TRUST%20AND,TRANSPARENCY">[13]</a>.</p>
+<h2>
+Making Travel Easier for India’s Global Explorers</h2>
+<p>Beyond the student community, Wise is
+actively courting <b>India’s booming outbound travellers</b>. The
+timing is opportune: pent-up demand after the pandemic led Indians to
+spend a record <b>$31.7&nbsp;billion overseas in FY2023-24</b>, with
+<b>travel</b> alone accounting for $17&nbsp;billion (₹1.4&nbsp;lakh
+crore) – <b>53.6% of all outward remittances under
+LRS</b><a href="https://timesofindia.indiatimes.com/business/india-business/indians-spend-record-31-7-billion-abroad-in-fy24-17-rise-in-year/articleshow/110314631.cms#:~:text=after%20the%20imposition%20of%20TCS,billion%20in%20the%20previous%20year">[5]</a>.
+This surge in international tourism has outpaced even education
+payments, creating a new priority segment for fintech innovation.
+Wise’s strategy is to become the go-to travel card for this wave of
+tourists and business travellers, capitalizing on the pain points of
+traditional options.</p>
+<p>Many Indian travellers currently rely on <b>bank-issued forex
+cards or credit cards</b> abroad, often unaware of the true costs.
+According to a recent survey, 67% of travellers know their banks
+charge hidden exchange markups (often <b>3%+ per transaction</b>) and
+foreign usage fees, yet 65% still use those cards out of habit<a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=rates%20and%20hidden%20fees,fees%20as%20high%20as%203">[8]</a>.
+Others queue up at airport money changers, losing 5-10% in poor
+rates<a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=rates%20and%20hidden%20fees,fees%20as%20high%20as%203">[8]</a>.
+The Wise Card squarely addresses these inefficiencies. By using the
+<b>mid-market exchange rate</b> (the same rate one finds on Google)
+and charging no foreign transaction fees, it guarantees <b>huge
+savings</b> for travellers. For instance, someone spending ₹2&nbsp;lakh
+on a Europe trip could easily save over ₹6,000 in fees compared to
+using a typical credit card (which would silently add ~3.5% in FX
+markup<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=Over%2095,3.5%25%20markup%20on%20currency%20exchange">[7]</a>).</p>
+<p>Additionally, <b>Wise has partnered with Atlys</b>, a popular
+digital visa application platform, to reach travellers at the start
+of their journey. Starting this October, <b>Atlys users applying for
+visas</b> to the US, UK, Schengen and other destinations have been
+receiving an invite to get a Wise Card as part of their pre-travel
+checklist. <i>“We strive to make every aspect of travel simpler for
+our users,”</i> says <b>Mohak Nahta, Founder &amp; CEO of Atlys</b>.
+<i>“By offering the Wise Card during the visa process, we’re
+solving the foreign currency puzzle upfront. Travelers love landing
+in a new country already equipped with a card that works everywhere
+and</i> <i>saves them money.”</i> Thousands of applicants have
+already taken up this offer, activating their Wise Cards before
+departure. This integration has not only added convenience for
+travellers but also given Wise a strong foothold among first-time
+overseas tourists who might not have considered a fintech solution
+for spending.</p>
+<p><b>Neha Gupta, 34,</b> an avid traveller from New Delhi, was one
+such convert. She recalls how on a recent trip to Japan she found
+many places preferred cash: <i>“Even with an HDFC Infinia credit
+card in my wallet (which is great for airline miles), I struggled
+when I needed cash. My bank would charge ₹500 plus 2% for an ATM
+withdrawal abroad – daylight robbery! So I tried Wise. With</i>
+<i>zero ATM fees, it was a lifesaver in Tokyo. I could withdraw yen
+at ATMs with</i> <i>no extra charges, and the exchange rate was
+unbelievably good. Now I carry my Wise Card on every trip for backup,
+especially in countries like</i> <i>Japan and Germany</i> <i>where
+cash is king.”</i></p>
+<p>Neha’s experience underscores a key differentiator: the Wise
+Card offers <b>two fee-free ATM withdrawals each month</b> (up to a
+fair usage limit) for all customers<a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=hassle">[9]</a>.
+This feature has resonated strongly with frequent flyers and travel
+bloggers, who often warn of the steep surcharges banks levy for cash
+withdrawals overseas. By essentially eliminating ATM fees for
+moderate use, Wise ensures travellers can access local currency when
+needed – whether it’s euros for a Munich Christmas market or yen
+for a taxi in rural Japan – without dread of fees. <i>“Having
+Wise in my pocket means I never worry about finding an exchange
+counter or paying 5% extra on my credit card. It’s peace of mind,”</i>
+Neha adds.</p>
+<h2>
+Wise’s Vision – A Borderless Money Experience for All Indians</h2>
+<p>With the Indian launch of its card, Wise
+is <b>ambitious about scaling up</b>. The company is already planning
+to support <b>500,000 Indian cardholders by the end of 2026</b>,
+aiming to capture a significant share of the outward travel spend
+market. <i>“Our mission is to create a world where moving money is
+completely transparent, instant, and free of friction,”</i> said
+<b>Shrawan (SK) Saraogi, APAC Head of Expansion at Wise</b>. <i>“Over
+the last decade, we’ve solved cross-border transfers for millions
+of people. Now we’re tackling everyday spending.</i> <i>Indians
+spent over $30&nbsp;billion abroad last year</i> <i>– too much of
+that went to bank fees and bad exchange rates. The Wise Card is our
+answer:</i> <i>a faster, cheaper, and more transparent way</i> <i>for
+Indians to spend their money globally,”</i> he explained<a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=Over%2095,3.5%25%20markup%20on%20currency%20exchange">[7]</a><a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=rates%20and%20hidden%20fees,fees%20as%20high%20as%203">[8]</a>.</p>
+<p>Saraogi noted that the early reception has exceeded expectations,
+reflecting a strong pent-up demand. <i>“Frankly, the uptake has
+been incredible. It shows that people were waiting for something like
+this. In the first month, we’ve seen tens of thousands of
+transactions via Wise Cards from India – from California coffee
+shops to European rail tickets – and growth is primarily through
+word-of-mouth. We’re confident that by next year, a Wise Card will
+be as essential in an Indian traveller’s wallet as their passport,”</i>
+he added. Wise also hinted at upcoming features for Indian users,
+such as <b>UPI integration for easier rupee top-ups</b> and
+partnerships with travel agencies to bundle the card with tour
+packages, further simplifying the customer experience.</p>
+<h4>About Wise</h4>
+<p>Wise is a global technology company
+building the best way to move and manage the world’s money. With
+the <b>Wise Account</b> and <b>Wise Business</b>, people and
+businesses can hold 40+ currencies, send money to 80 countries, and
+spend abroad using the Wise Card. Large companies and banks also
+utilize Wise’s infrastructure; the platform is creating an entirely
+new, instant payments network for international finance. One of the
+world’s fastest-growing profitable tech companies, Wise launched in
+2011 and is listed on the London Stock Exchange under the ticker
+WISE. In <b>FY2024</b>, Wise served <b>12.8&nbsp;million customers</b>,
+processing about <b>£118.5&nbsp;billion</b> in cross-border
+transactions and saving users over <b>£1.8&nbsp;billion</b> in fees
+compared to traditional banking<a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=One%20of%20the%20world%E2%80%99s%20fastest,Exchange%20under%20the%20ticker%2C%20WISE">[14]</a>.</p>
+<p><b>Contact (Press)</b>: press@wise.com | <b>Website</b>: <a href="https://wise.com/">wise.com</a></p>
+<p style="margin-top: 0in; margin-bottom: 0.14in">
+</p>
+      <hr style="margin-top:40px; margin-bottom:20px; border:none; border-top:1px solid var(--border-color);">
+      <ol class="footnotes">
+        <li id="fn1"><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=Mumbai%2C%20June%2003%2C%202025%20%E2%80%93,%E2%80%93%20Cross%20Border%20for%20exports" target="_blank">[1]</a></li>
+<li id="fn2"><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=,3%20business%20days" target="_blank">[2]</a></li>
+<li id="fn3"><a href="https://www.hdfcbank.com/personal/pay/cards/forex-cards/multicurrency-platinum-forexplus-chip-card/eligibility#:~:text=%2A%20Self,for%20funding%20the%20Forex%20card" target="_blank">[3]</a></li>
+<li id="fn4"><a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=I%20switched%20to%20instant%20platforms%2C,%E2%80%9D" target="_blank">[4]</a></li>
+<li id="fn5"><a href="https://timesofindia.indiatimes.com/business/india-business/indians-spend-record-31-7-billion-abroad-in-fy24-17-rise-in-year/articleshow/110314631.cms#:~:text=after%20the%20imposition%20of%20TCS,billion%20in%20the%20previous%20year" target="_blank">[5]</a></li>
+<li id="fn6"><a href="https://timesofindia.indiatimes.com/business/india-business/indians-spend-record-31-7-billion-abroad-in-fy24-17-rise-in-year/articleshow/110314631.cms#:~:text=The%20share%20of%20international%20travel,due%20to%20restrictions%20on%20mobility" target="_blank">[6]</a></li>
+<li id="fn7"><a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=Over%2095,3.5%25%20markup%20on%20currency%20exchange" target="_blank">[7]</a></li>
+<li id="fn8"><a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=rates%20and%20hidden%20fees,fees%20as%20high%20as%203" target="_blank">[8]</a></li>
+<li id="fn9"><a href="https://newsroom.wise.com/en-CAS/250497-singapore-tourism-board-and-wise-to-boost-travel-to-singapore-and-offer-greater-value-for-malaysian-travellers/#:~:text=hassle" target="_blank">[9]</a></li>
+<li id="fn10"><a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=In%202024%2C%20Indian%20families%20collectively,to%20hidden%20charges%20from%20banks" target="_blank">[10]</a></li>
+<li id="fn11"><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=This%20milestone%20builds%20on%20Wise%27s,on%20its%20local%20presence%20through" target="_blank">[11]</a></li>
+<li id="fn12"><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=,3%20business%20days" target="_blank">[12]</a></li>
+<li id="fn13"><a href="https://www.indiatoday.in/education-today/latest-studies/story/indian-students-lose-rs-1700-crore-to-hidden-bank-fees-in-2024-report-2758031-2025-07-20#:~:text=THE%20ISSUE%20OF%20TRUST%20AND,TRANSPARENCY" target="_blank">[13]</a></li>
+<li id="fn14"><a href="https://newsroom.wise.com/en-CAS/250703-wise-granted-rbi-s-in-principle-approval-to-operate-as-cross-border-payment-aggregator/#:~:text=One%20of%20the%20world%E2%80%99s%20fastest,Exchange%20under%20the%20ticker%2C%20WISE" target="_blank">[14]</a></li>
+      </ol>
+    </div>
+    <aside class="sidebar">
+      <div class="sidebar-section download-copy">
+        <h5>Download &amp; Copy</h5>
+        <ul>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+</svg>
+<span>Download PDF</span></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"/>
+</svg>
+<span>Copy text</span></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>
+</svg>
+<span>Copy link</span></a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section contact-us">
+        <h5>Contact Us</h5>
+        <ul>
+          <li><a href="mailto:press@wise.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+</svg>
+<span>Press Inquiries</span></a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section share">
+        <h5>Share</h5>
+        <div class="share-icons">
+          <a href="#" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+</svg>
+</a>
+          <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+</svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"/>
+</svg></a>
+          <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
