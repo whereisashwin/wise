@@ -22,7 +22,8 @@
     .site-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      /* align items horizontally like the original Newsroom header */
+      justify-content: flex-start;
       padding: 20px 40px;
       border-bottom: 1px solid var(--border-color);
     }
@@ -39,30 +40,57 @@
     }
     .nav-links {
       display: flex;
-      gap: 20px;
-      font-size: 14px;
-      margin-left: 40px;
+      gap: 24px;
+      /* slightly larger font for closer fidelity */
+      font-size: 15px;
+      margin-left: 0;
     }
     .nav-links a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: 500;
+      display: flex;
+      align-items: center;
     }
     .nav-links a:hover {
       color: var(--primary-color);
     }
     .register-btn {
-      margin-left: auto;
+      /* place next to nav items instead of pushing to the far right */
+      margin-left: 20px;
       background-color: var(--primary-color);
-      color: white;
-      padding: 8px 18px;
+      color: #ffffff;
+      padding: 8px 24px;
       border-radius: 9999px;
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
+      line-height: 1.3;
+      display: inline-flex;
+      align-items: center;
     }
     .register-btn:hover {
       background-color: #009e3e;
+    }
+
+    /* wrapper for nav links and actions, aligns items horizontally */
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+      gap: 24px;
+    }
+
+    /* search icon styling */
+    .search-icon {
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+    .search-icon:hover {
+      color: var(--primary-color);
     }
     .container {
       display: flex;
@@ -84,33 +112,35 @@
       align-self: flex-start;
     }
     h1 {
-      font-size: 40px;
+      font-size: 44px;
       font-weight: 800;
       margin-top: 0;
-      margin-bottom: 24px;
-      line-height: 1.2;
+      margin-bottom: 28px;
+      line-height: 1.1;
     }
     h2 {
-      font-size: 28px;
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 26px;
       font-weight: 700;
       margin-top: 32px;
       margin-bottom: 16px;
     }
-    h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-top: 28px;
-      margin-bottom: 14px;
-    }
     h4 {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 600;
-      margin-top: 24px;
-      margin-bottom: 8px;
+      margin-top: 28px;
+      margin-bottom: 10px;
     }
     p {
-      font-size: 16px;
-      margin-bottom: 16px;
+      /* Increase base font size and line height for better readability */
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
     p:first-of-type {
       margin-top: 0;
@@ -147,10 +177,33 @@
         flex-direction: column;
         align-items: flex-start;
       }
+      /* Adjust header paddings and alignments */
+      .site-header {
+        padding: 16px 20px;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: 0;
+        gap: 16px;
+      }
       .nav-links {
+        width: 100%;
+        margin-left: 0;
+        gap: 16px;
         flex-wrap: wrap;
-        margin: 10px 0;
-        gap: 10px;
+      }
+      .search-icon {
+        margin-left: 0;
+        margin-top: 12px;
+      }
+      .register-btn {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      .logo-area {
+        margin-bottom: 8px;
       }
       h1 {
         font-size: 32px;
@@ -244,14 +297,23 @@
       <img src="data:image/png;base64,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" alt="Wise logo">
       <span>Newsroom</span>
     </div>
-    <nav class="nav-links">
-      <a href="#">News</a>
-      <a href="#">Public Policy</a>
-      <a href="#">About</a>
-      <a href="#">Media kits</a>
-      <a href="#">Contact</a>
-    </nav>
-    <a href="#" class="register-btn">Register</a>
+    <!-- Wrapper for navigation links and actions -->
+    <div class="nav-wrapper">
+      <nav class="nav-links">
+        <a href="#">News</a>
+        <a href="#">Public Policy</a>
+        <a href="#">About</a>
+        <a href="#">Media kits</a>
+        <a href="#">Contact</a>
+      </nav>
+      <!-- Simple search icon to more closely resemble the original header -->
+      <a href="#" class="search-icon" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7zm10 10-6-6" />
+        </svg>
+      </a>
+      <a href="#" class="register-btn">Register</a>
+    </div>
   </header>
   <div class="container">
     <div class="content">
